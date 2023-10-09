@@ -31,6 +31,7 @@ session.mount('http://', HTTPAdapter(max_retries=retries))
 
 def get_option_chain_dic(symbol):
     urlheader = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0',
     "authority": "www.nseindia.com",
     "scheme":"https"
     }
