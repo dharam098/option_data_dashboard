@@ -116,9 +116,9 @@ while True:
         kpi1, kpi2, kpi3 = st.columns(3)
 
         # fill in those three columns with respective metrics or KPIs 
-        kpi1.metric(label="NIFTY", value=live_data['max_pain_NIFTY'].iloc[-1], delta = live_data['pcr_NIFTY'].iloc[-1])
-        kpi2.metric(label="BANKNIFTY", value=live_data['max_pain_BANKNIFTY'].iloc[-1], delta = live_data['pcr_BANKNIFTY'].iloc[-1])
-        kpi3.metric(label="FINNIFTY", value=live_data['max_pain_FINNIFTY'].iloc[-1],delta =  live_data['pcr_FINNIFTY'].iloc[-1])
+        kpi1.metric(label="NIFTY", value=live_data['max_pain_NIFTY'].iloc[-1])#, delta = live_data['pcr_NIFTY'].iloc[-1])
+        kpi2.metric(label="BANKNIFTY", value=live_data['max_pain_BANKNIFTY'].iloc[-1])#, delta = live_data['pcr_BANKNIFTY'].iloc[-1])
+        kpi3.metric(label="FINNIFTY", value=live_data['max_pain_FINNIFTY'].iloc[-1])#,delta =  live_data['pcr_FINNIFTY'].iloc[-1])
 
         # create two columns for charts 
         fig_col1, fig_col2 = st.columns(2)
