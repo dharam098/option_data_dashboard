@@ -37,7 +37,7 @@ def get_option_chain_dic(symbol):
     }
 
     url = f"https://www.nseindia.com/api/option-chain-indices?symbol={symbol}"
-    data = requests.get(url, headers=urlheader)
+    data = session.get(url, headers=urlheader)
     # data2 = data.decode('utf-8')
     oc={}
     if (data):
