@@ -132,8 +132,8 @@ while True:
             fig2 = px.line(live_data.iloc[1:], y = 'max_pain_BANKNIFTY', x = 'time_BANKNIFTY',  markers=True)#'time_BANKNIFTY')
             st.write(fig2)
         with fig_col3:
-            st.markdown("### Third Chart")
-            fig3 = px.line(live_data.iloc[1:], y = 'max_pain_FINNIFTY', x = live_data.iloc[1:].index,  markers=True)#'time_FINNIFTY')
+            st.markdown("### FINNIFTY")
+            fig3 = px.line(live_data.iloc[1:], y = 'max_pain_FINNIFTY', x = x = 'time_FINNIFTY',  markers=True)#'time_FINNIFTY')
             st.write(fig3)
             
         st.markdown("### HISTORY")
