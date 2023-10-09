@@ -136,7 +136,7 @@ while True:
         
         with fig_col3:
             st.markdown("### FINNIFTY")
-            fig3 = px.line(live_data.iloc[1:], y = 'max_pain_FINNIFTY', x = x = 'time_FINNIFTY',  markers=True)#'time_FINNIFTY')
+            fig3 = px.line(live_data.iloc[1:], y = 'max_pain_FINNIFTY', x = 'time_FINNIFTY',  markers=True)#'time_FINNIFTY')
             st.write(fig3)
         with fig_col4:    
             st.markdown("### HISTORY")
