@@ -121,8 +121,8 @@ while True:
         kpi3.metric(label="FINNIFTY", value=live_data['max_pain_FINNIFTY'].iloc[-1],delta =  str(live_data['pcr_FINNIFTY'].iloc[-1]))
 
         # create two columns for charts 
-        # fig_col1, fig_col2 = st.columns(2)
-        fig_col1, fig_col2, fig_col3 = st.columns(3)
+        fig_col1, fig_col2 = st.columns(2)
+        # fig_col1, fig_col2, fig_col3 = st.columns(3)
         with fig_col1:
             st.markdown("### NIFTY")
             fig = px.line(live_data.iloc[1:], y = 'max_pain_NIFTY', x = 'time_NIFTY',  markers=True)#'time_NIFTY')
@@ -131,12 +131,15 @@ while True:
             st.markdown("### BANKNIFTY")
             fig2 = px.line(live_data.iloc[1:], y = 'max_pain_BANKNIFTY', x = 'time_BANKNIFTY',  markers=True)#'time_BANKNIFTY')
             st.write(fig2)
+
+        fig_col3, fig_col4 = st.columns(2)
+        
         with fig_col3:
             st.markdown("### FINNIFTY")
             fig3 = px.line(live_data.iloc[1:], y = 'max_pain_FINNIFTY', x = x = 'time_FINNIFTY',  markers=True)#'time_FINNIFTY')
             st.write(fig3)
-            
-        st.markdown("### HISTORY")
-        st.dataframe(live_data.iloc[1:].tail(10).reset_index(drop=True))
-        time.sleep(20)
+        with fig_col4:    
+            st.markdown("### HISTORY")
+            st.dataframe(live_data.iloc[1:].tail(10).reset_index(drop=True))
+            time.sleep(20)
     #placeholder.empty()
