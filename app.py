@@ -31,13 +31,12 @@ session.mount('http://', HTTPAdapter(max_retries=retries))
 
 def get_option_chain_dic(symbol):
     urlheader = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     "authority": "www.nseindia.com",
     "scheme":"https"
     }
 
     url = f"https://www.nseindia.com/api/option-chain-indices?symbol={symbol}"
-    data = session.get(url, headers=urlheader)
+    data = session.get(url)#, headers=urlheader)
     # data2 = data.decode('utf-8')
     oc={}
     if (data):
